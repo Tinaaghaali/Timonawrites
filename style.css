@@ -98,3 +98,51 @@ body { font-family: 'Vazirmatn', sans-serif; background: var(--bg); color: var(-
   .header .container { flex-direction: column; padding: 15px 20px; }
   .nav { flex-direction: column; gap: 15px; margin-top: 10px; }
 }
+/* منوی کشویی */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-toggle {
+  color: var(--text-light);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s;
+}
+.dropdown-toggle:hover {
+  color: var(--primary-dark);
+}
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  min-width: 160px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  border-radius: 12px;
+  overflow: hidden;
+  z-index: 1000;
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+}
+.dropdown-menu a {
+  color: var(--text);
+  padding: 12px 20px;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s, color 0.3s;
+  font-size: 0.95rem;
+}
+.dropdown-menu a:hover {
+  background: var(--primary);
+  color: white;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
