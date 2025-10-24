@@ -1,19 +1,234 @@
+/* رنگ اصلی: فقط برای تأکید */
+:root {
+  --primary: #b3cf99;        /* سبز ملایم */
+  --primary-dark: #8fb37a;   /* سبز تیره‌تر برای هاور */
+  --text: #2d3436;          /* متن اصلی */
+  --text-light: #636e72;    /* متن کم‌رنگ */
+  --bg: #ffffff;            /* پس‌زمینه سفید */
+  --bg-light: #f9fbfc;      /* پس‌زمینه کم‌رنگ */
+}
+
+/* ریست */
 * { margin: 0; padding: 0; box-sizing: border-box; }
-body { font-family: 'Vazirmatn', sans-serif; background: #f9fbfc; color: #2d3436; line-height: 1.8; direction: rtl; }
-.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
-.header { background: white; position: fixed; top: 0; width: 100%; box-shadow: 0 2px 20px rgba(0,0,0,0.1); z-index: 1000; }
-.header .container { display: flex; justify-content: space-between; align-items: center; padding: 18px 20px; }
-.logo a { font-weight: 700; font-size: 1.6rem; text-decoration: none; background: linear-gradient(135deg, #00b894, #0984e3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-.nav a { color: #636e72; text-decoration: none; margin: 0 15px; font-weight: 500; }
-.hero { background: linear-gradient(135deg, #00b894, #0984e3); color: white; text-align: center; padding: 160px 20px 100px; margin-top: 70px; }
-.hero h1 { font-size: 3rem; margin-bottom: 1rem; }
-.btn-primary { background: white; color: #00b894; padding: 14px 36px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block; margin-top: 20px; }
-.posts-section { padding: 100px 0; background: white; }
-.section-title { text-align: center; font-size: 2.2rem; margin-bottom: 3rem; }
-.posts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; }
-.post-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
-.post-image { height: 180px; background: linear-gradient(45deg, #00b894, #0984e3); position: relative; }
-.post-image::after { content: '✍️'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 3rem; color: white; opacity: 0.3; }
-.post-content { padding: 25px; }
-.read-more { color: #00b894; text-decoration: none; }
-.footer { background: #2d3436; color: white; text-align: center; padding: 40px 0; }
+body {
+  font-family: 'Vazirmatn', sans-serif;
+  background: var(--bg-light);
+  color: var(--text);
+  line-height: 1.8;
+  direction: rtl;
+  font-size: 18px;
+}
+
+/* کانتینر */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* هدر */
+.header {
+  background: white;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+  z-index: 1000;
+  transition: all 0.3s;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 20px;
+}
+.logo a {
+  font-weight: 700;
+  font-size: 1.6rem;
+  text-decoration: none;
+  color: var(--primary-dark);
+}
+.nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s;
+}
+.nav a:hover {
+  color: var(--primary-dark);
+}
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s;
+}
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* هیرو */
+.hero {
+  background: white;
+  color: var(--text);
+  text-align: center;
+  padding: 160px 20px 100px;
+  margin-top: 70px;
+  border-bottom: 1px solid #eee;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+.subtitle {
+  font-size: 1.3rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  color: var(--text-light);
+}
+.btn-primary {
+  display: inline-block;
+  background: var(--primary);
+  color: white;
+  padding: 14px 36px;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 8px 25px rgba(179, 207, 153, 0.3);
+  transition: all 0.3s;
+}
+.btn-primary:hover {
+  background: var(--primary-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(179, 207, 153, 0.4);
+}
+
+/* پست‌ها */
+.posts-section {
+  padding: 100px 0;
+  background: var(--bg);
+}
+.section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  color: var(--text);
+  position: relative;
+}
+.section-title::after {
+  content: '';
+  width\nconst: 60px;
+  height: 4px;
+  background: var(--primary);
+  border-radius: 2px;
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+}
+.post-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.post-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+.post-image {
+  height: 180px;
+  background: #f1f1f1;
+  position: relative;
+  border-bottom: 4px solid var(--primary);
+}
+.post-image::after {
+  content: '✍️';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  color: #ccc;
+}
+.post-content {
+  padding: 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+.post-content h3 a {
+  color: var(--text);
+  text-decoration: none;
+  transition: color 0.3s;
+  font-size: 1.4rem;
+}
+.post-content h3 a:hover {
+  color: var(--primary-dark);
+}
+.post-meta {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 12px;
+}
+.read-more {
+  color: var(--primary-dark);
+  font-weight: 500;
+  text-decoration: none;
+  align-self: flex-start;
+}
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* درباره */
+.about-section {
+  padding: 100px 0;
+  background: var(--bg-light);
+  text-align: center;
+}
+.about-content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+.about-text p {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+.about-text a {
+  color: var(--primary-dark);
+  text-decoration: none;
+}
+
+/* فوتر */
+.footer {
+  background: var(--text);
+  color: #dfe6e9;
+  text-align: center;
+  padding: 40px 0;
+  font-size: 0.95rem;
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 2.3rem; }
+  .header .container { flex-direction: column; padding: 15px 20px; }
+  .nav { flex-direction: column; gap: 15px; margin-top: 10px; }
+}
