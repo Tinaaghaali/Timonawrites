@@ -98,7 +98,7 @@ body { font-family: 'Vazirmatn', sans-serif; background: var(--bg); color: var(-
   .header .container { flex-direction: column; padding: 15px 20px; }
   .nav { flex-direction: column; gap: 15px; margin-top: 10px; }
 }
-/* منوی کشویی */
+/* منوی کشویی ساده و حرفه‌ای */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -106,9 +106,8 @@ body { font-family: 'Vazirmatn', sans-serif; background: var(--bg); color: var(-
 .dropdown-toggle {
   color: var(--text-light);
   text-decoration: none;
-  margin: 0 15px;
   font-weight: 500;
-  position: relative;
+  padding: 0 15px;
   transition: color 0.3s;
 }
 .dropdown-toggle:hover {
@@ -120,11 +119,12 @@ body { font-family: 'Vazirmatn', sans-serif; background: var(--bg); color: var(-
   top: 100%;
   right: 0;
   background: white;
-  min-width: 160px;
+  min-width: 180px;
   box-shadow: 0 8px 25px rgba(0,0,0,0.15);
   border-radius: 12px;
   overflow: hidden;
   z-index: 1000;
+  margin-top: 8px;
   opacity: 0;
   transform: translateY(-10px);
   transition: all 0.3s ease;
@@ -134,8 +134,8 @@ body { font-family: 'Vazirmatn', sans-serif; background: var(--bg); color: var(-
   padding: 12px 20px;
   text-decoration: none;
   display: block;
-  transition: background 0.3s, color 0.3s;
   font-size: 0.95rem;
+  transition: all 0.3s;
 }
 .dropdown-menu a:hover {
   background: var(--primary);
@@ -146,16 +146,33 @@ body { font-family: 'Vazirmatn', sans-serif; background: var(--bg); color: var(-
   opacity: 1;
   transform: translateY(0);
 }
-/* صفحه دسته‌بندی */
-.category-page { padding: 120px 0 80px; background: var(--bg-light); }
-.category-title {
-  font-size: 2.8rem; text-align: center; margin-bottom: 1rem; color: var(--text);
+
+/* منوی اصلی */
+.nav {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+.nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 500;
   position: relative;
+  transition: color 0.3s;
 }
-.category-title::after {
-  content: ''; width: 80px; height: 4px; background: var(--primary);
-  display: block; margin: 15px auto; border-radius: 2px;
+.nav a:hover {
+  color: var(--primary-dark);
 }
-.category-desc {
-  text-align: center; color: var(--text-light); font-size: 1.1rem; max-width: 700px; margin: 0 auto 3rem;
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  right: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s;
+}
+.nav a:hover::after {
+  width: 100%;
 }
