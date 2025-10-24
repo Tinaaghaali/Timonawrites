@@ -1,0 +1,19 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Vazirmatn', sans-serif; background: #f9fbfc; color: #2d3436; line-height: 1.8; direction: rtl; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.header { background: white; position: fixed; top: 0; width: 100%; box-shadow: 0 2px 20px rgba(0,0,0,0.1); z-index: 1000; }
+.header .container { display: flex; justify-content: space-between; align-items: center; padding: 18px 20px; }
+.logo a { font-weight: 700; font-size: 1.6rem; text-decoration: none; background: linear-gradient(135deg, #00b894, #0984e3); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.nav a { color: #636e72; text-decoration: none; margin: 0 15px; font-weight: 500; }
+.hero { background: linear-gradient(135deg, #00b894, #0984e3); color: white; text-align: center; padding: 160px 20px 100px; margin-top: 70px; }
+.hero h1 { font-size: 3rem; margin-bottom: 1rem; }
+.btn-primary { background: white; color: #00b894; padding: 14px 36px; border-radius: 50px; text-decoration: none; font-weight: 600; display: inline-block; margin-top: 20px; }
+.posts-section { padding: 100px 0; background: white; }
+.section-title { text-align: center; font-size: 2.2rem; margin-bottom: 3rem; }
+.posts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 30px; }
+.post-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 8px 25px rgba(0,0,0,0.08); }
+.post-image { height: 180px; background: linear-gradient(45deg, #00b894, #0984e3); position: relative; }
+.post-image::after { content: '✍️'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 3rem; color: white; opacity: 0.3; }
+.post-content { padding: 25px; }
+.read-more { color: #00b894; text-decoration: none; }
+.footer { background: #2d3436; color: white; text-align: center; padding: 40px 0; }
