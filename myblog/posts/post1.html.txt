@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <title>چگونه نوشتن زندگی من را تغییر داد | قلم سبز</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="logo"><a href="../index.html">قلم سبز</a></div>
+    </div>
+  </header>
+
+  <article style="max-width: 800px; margin: 100px auto; padding: 20px;">
+    <h1>چگونه نوشتن زندگی من را تغییر داد</h1>
+    <p style="color: #777; margin: 10px 0;">۲۴ مهر ۱۴۰۴ — ۵ دقیقه مطالعه</p>
+    <p>شش ماه پیش تصمیم گرفتم هر روز ۵۰۰ کلمه بنویسم...</p>
+    <p>این تصمیم کوچک، بزرگ‌ترین تغییر زندگی من شد.</p>
+    <p><a href="../index.html">← بازگشت به خانه</a></p>
+  </article>
+</body>
+</html>
